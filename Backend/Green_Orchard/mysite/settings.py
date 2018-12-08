@@ -54,7 +54,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'expenses/templates')], #This should just be templates
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,6 +65,13 @@ TEMPLATES = [
             ],
         },
     },
+    # {
+    #     'BACKEND': 'django.template.backends.jinja2.Jinja2',
+    #     'DIRS': [os.path.join(BASE_DIR, 'expenses/templates')], #This should just be templates
+    #     'OPTIONS': {
+    #         'environment': 'mysite.jinja2.environment'
+    #     }
+    # }
 ]
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
@@ -75,12 +82,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # change this to created database
-        'USER': '' # database admin user
-        'PASSWORD': '' # database password, if needed
-        'HOST': '',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -122,3 +125,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]

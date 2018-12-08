@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="greetings">
+  <h1>Welcome Back {{ user's name }}</h1>
+  <h3>Take a look at your Orchard</h3>
+</div>
+<div class="top-expenses">
+  <p>Top 5 Expenses YTD</p> <!-- This can change -->
+  <ol>
+    {% for expense in top expenses from database %}
+      <li>{{ expense }}</li>
+    {% endfor %}
+  </ol>
+</div>
+<div class="year-summary">
+  <p>Total $ Spent This Year: ${{ sum-amount }}</p>
+  <svg class="d3-chart">
+    <!-- d3 bar graph goes here -->
+  </svg>
+</div>
+<div class="bank-news">
+  <!-- Controlled by React and APIs -->
+  {% for article in top articles from news API %}
+    <div>
+      {{ article }}
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
