@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Expenses(models.Model):
     name = models.CharField(max_length=100)
-    amount = models.DecimalField() #Needs arguments
+    # amount = models.DecimalField() #Needs arguments
     # month = just month here
     # year = just month here
     date_posted = models.DateTimeField(default=timezone.now)
