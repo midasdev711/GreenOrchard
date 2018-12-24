@@ -7,7 +7,7 @@ def index(request):
 def about_us(request):
     return render(request, 'general/about_us.html')
 
-    
+
 def faq(request):
     # return HttpResponse("This is the faq part")
     # return render(request, 'expenses/dummy.html')
