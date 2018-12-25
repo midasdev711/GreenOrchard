@@ -2,7 +2,7 @@
 
 {% block content %}
   <div class="month-left-align">
-    <h1 class="month-title">January, 2018</h1>
+    <h1 class="month-title">{{ month }}, 2018</h1>
     <div class="month-pie-chart">
       <svg>
         <!-- d3 pie-chart goes here -->
@@ -10,12 +10,12 @@
     </div>
   </div>
   <div class="month-center-align">
-    <p class="quote">"You seemed to fill the orchard this month with {{ highest_exp }}, {{ second_highest_exp }}, and {{ third_highest_exp }}"</p>
+    <p class="quote">"You seemed to fill the orchard this month with {{ expenses.0 }}, {{ expenses.1 }}, and {{ expenses.2 }}"</p>
   </div>
   <div class="month-right-align">
     <!-- have table-like section where titles are in bold and expenses are under -->
     <!-- also make a scrollbar for this div -->
     <div class="expense-list"></div>
-    <p>Total Spent This Month: $ <span>200</span></p>
+    <p>Total Spent This Month: $<span>{{ total }}</span></p>
   </div>
 {% endblock %}

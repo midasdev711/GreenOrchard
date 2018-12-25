@@ -1,3 +1,4 @@
+from random import randint, choice
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -11,13 +12,19 @@ def index(request):
     return HttpResponse("This is the expenses index")
 
 def summary(request):
-    # return render(request, 'expenses/dummy.html')
-    return render(request, 'expenses/summary.html')
+    context = {'name': 'George'}
+    return render(request, 'expenses/summary.html', context)
 
 def month(request):
-    # return render(request, 'expenses/dummy.html')
-    return render(request, 'expenses/month.html')
-    # return HttpResponse("This is the month part")
+    month_names = ['January', 'February', 'March', 'April',
+                    'May', 'June', 'July', 'August',
+                    'September', 'October', 'November', 'December']
+    context = {
+        'month': choice(month_names),
+        'expenses': ['Stats Class', 'Rent', 'Clothing'],
+        'total': randint(100, 1000),
+    }
+    return render(request, 'expenses/month.html', context)
 
 def category(request):
     # return render(request, 'expenses/dummy.html')
