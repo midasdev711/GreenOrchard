@@ -1,4 +1,4 @@
-<!-- {% load static %}  -->
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,19 +6,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link rel="stylesheet" type="text/css" href="{% static 'general/index.css' %}"> -->
+  <link rel="stylesheet" type="text/css" href="{% static 'general/index.css' %}">
   <title>Document</title>
 </head>
 <body>
   <header>
     <!-- Left side -->
-    <span>Green Orchard (logo)</span>
-    <span>Login</span>
+    <ul>
+      <li class="title">Green Orchard (logo)</li>
+      <li>Login</li>
+    </ul>
 
     <!-- Right side -->
-    <span>Summary</span>
-    <span>Months (dropdown)</span>
-    <span>Other</span>
+    <ul>
+      <li>Summary</li>
+      <li>Months (dropdown)
+        <div class="month-dropdown dropdown">
+          <li>January</li>
+          <li>February</li>
+          <li>March</li>
+        </div>
+      </li>
+      <li>Other (dropdown)
+        <div class="other-dropdown dropdown">
+          <li>Budget Tracker</li>
+          <li>Loan Tracker</li>
+          <li>The Developers</li>
+          <li>FAQs</li>
+        </div>
+      </li>
+    </ul>
   </header>
   {% block content %}{% endblock %}
   <footer>
