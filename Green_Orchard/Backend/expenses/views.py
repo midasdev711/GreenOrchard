@@ -12,8 +12,7 @@ def index(request):
     return HttpResponse("This is the expenses index")
 
 def summary(request):
-    context = {'name': 'George'}
-    return render(request, 'expenses/summary.html', context)
+    return render(request, 'expenses/summary.html', {'name': 'George'})
 
 def month(request):
     month_names = ['January', 'February', 'March', 'April',
