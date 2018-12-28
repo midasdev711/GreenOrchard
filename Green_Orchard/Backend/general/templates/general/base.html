@@ -7,19 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="{% static 'general/index.css' %}">
-  <title>Document</title>
+  <title>{{ title }} - Green Orchard</title>
 </head>
 <body>
   <header>
     <!-- Left side -->
     <ul>
-      <li class="title">Green Orchard (logo)</li>
-      <li>Login</li>
+      <li class="title"><a href="{% url 'root' %}">Green Orchard (logo)</a></li>
+      <li><a href="{% url 'login' %}">Login</a></li>
     </ul>
 
     <!-- Right side -->
     <ul>
-      <li>Summary</li>
+      <li><a href="#">Summary</a></li>
       <li>Months (dropdown)
         <div class="month-dropdown dropdown">
           <li>January</li>
@@ -29,10 +29,10 @@
       </li>
       <li>Other (dropdown)
         <div class="other-dropdown dropdown">
-          <li>Budget Tracker</li>
-          <li>Loan Tracker</li>
-          <li>The Developers</li>
-          <li>FAQs</li>
+          <li><a href="#">Budget Tracker</a></li>
+          <li><a href="#">Loan Tracker</a></li>
+          <li><a href="{% url 'about-us' %}">The Developers</a></li>
+          <li><a href="{% url 'faq' %}">FAQs</a></li>
         </div>
       </li>
     </ul>
