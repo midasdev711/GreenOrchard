@@ -19,9 +19,9 @@ class Expenses(models.Model):
         return self.name
 
 
-# class Banks(models.Model):
-#     name = models.CharField(max_length=100)
-#     abbr = models.CharField(max_length=100)
+class Banks(models.Model):
+    name = models.CharField(max_length=100)
+    abbr = models.CharField(max_length=100)
 
 
 # class Categories(model.Model):
