@@ -12,7 +12,7 @@ class Expenses(models.Model):
     date_posted = models.DateTimeField(default=timezone.now)
     last_updated = models.DateTimeField(auto_now=True)
     # category = foreign key to category
-    # bank_id = foreign key to their bank
+    bank_id = models.ForeignKey('Banks', on_delete=models.SET_NULL, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
