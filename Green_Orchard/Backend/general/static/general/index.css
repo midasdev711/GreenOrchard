@@ -25,3 +25,13 @@ html, body {
 .dropdown:hover {
   display: block;
 }
+
+.about-us-page {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about {
+  width: 30%;
+  /* outline: 2px solid red; */
+}
