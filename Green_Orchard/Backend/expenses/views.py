@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView)
+from .models import Expenses
+from mysite import csv_import
 # from django.template import loader
 
 # Create your views here.
@@ -20,7 +22,8 @@ def month(request):
                     'September', 'October', 'November', 'December']
     context = {
         'month': choice(month_names),
-        'expenses': ['Stats Class', 'Rent', 'Clothing'],
+        # 'expenses': ['Stats Class', 'Rent', 'Clothing'],
+        'expenses': Expenses.objects.all(),
         'total': randint(100, 1000),
     }
     return render(request, 'expenses/month.html', context)
