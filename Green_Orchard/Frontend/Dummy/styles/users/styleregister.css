@@ -101,7 +101,9 @@ h1{
 .SignUp-Container p{
     color: white;
 }
-
+.SignUp-container label{
+    color: black;
+}
 .checkBoxes{
     display: flex;
     justify-content: space-around;
