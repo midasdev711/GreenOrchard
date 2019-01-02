@@ -1,3 +1,113 @@
-General page where anyone can go to view the FAQ's. Refer to the
+<!-- General page where anyone can go to view the FAQ's. Refer to the
 drawing where it has 'FAQs' at the top, followed by a nav bar of
-question categories (i.e. "General, Expenses, Profile...")
+question categories (i.e. "General, Expenses, Profile...") -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/faq.css">
+    <title>FAQs - Green Orchard</title>
+</head>
+<body>
+        <!-- {% extends "general/base.html" %} -->
+
+        <!-- {% block content %} -->
+          <!-- Playing with idea of doing this dynamically or just writing it in -->
+          <!-- Either way, formatting looks like this... -->
+
+    <div class="Header">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+    
+    <h2>Search questions by category:</h2>
+
+    <nav class="QuestionNav">
+      <ul>
+        <li><a href="#General">General</a></li> |
+        <li><a href="#Expenses">Expenses</a></li> |
+        <li><a href="#Budget">Budget</a></li> |
+        <li><a href="#LoanTracker">Loan Tracker</a></li> |
+        <li><a href="#Profile">Profile</a></li> |
+        <li><a href="#Banks">Banks</a></li>
+      </ul>
+    </nav>
+
+    <h3 class="QuestionCategory" id="General">General</h3>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+        
+    <h4>Question</h4>
+    <p>Answer</p>
+        
+    <h4>Question</h4>
+    <p>Answer</p>
+    
+    <h3 class="QuestionCategory" id="Expenses">Expenses</h3>
+    
+    <h4>Question</h4>
+    <p>Answer</p>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+
+    <h3 class="QuestionCategory" id="Budget">Budget</h3>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+
+    <h3 class="QuestionCategory" id="LoanTracker">Loan Tracker</h3>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+  
+    <h3 class="QuestionCategory" id="Profile">Profile</h3>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+    
+    <h3 class="QuestionCategory" id="Banks">Banks</h3>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+
+    <h4>Question</h4>
+    <p>Answer</p>
+    
+    <!-- {% endblock %} -->
+
+    <div class="EmailLink">
+        <h3>Still have questions?</h3>
+        <p>Email <a href="#">example@greenorchard.com</a> and we will respond within 2 business days.</p>
+    </div>
+        
+</body>
+</html>

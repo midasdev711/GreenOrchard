@@ -1,11 +1,7 @@
 body {
     font-family: 'Dosis', sans-serif;
-    /* display: flex; */
-    justify-content: space-around;
 }
 
-.Header {
+h1 {
     border-bottom: 1px solid black;
 }
-
-
