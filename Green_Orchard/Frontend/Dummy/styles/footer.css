@@ -4,6 +4,7 @@ body {
 
 .Container {
     border: 2px inset black;
+    background-color: lightgray;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -17,15 +18,19 @@ body {
 }
 
 .OurInfo {
+    /* border: 1px solid red; */
     width: 100%;
     float: left;
-    /* border: 1px solid red; */
     align-content: center;
 }
 
 .OurInfo p {
     margin-left: 22%;
     display: inline-block;
+}
+
+i {
+    color: green;
 }
 
 /* .AlexInfo {
