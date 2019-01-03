@@ -1,11 +1,12 @@
 import csv, os, shutil
 from pathlib import Path
-from expenses.models import (~class here)
+from expenses.models import Expenses
+from django.contrib.auth.models import User
 
 
-def upload_files():
+def upload_files(banks):
     home = Path.home()
-    files_list = retrieve_files(home)
+    files_list = retrieve_files(home, banks)
     move_files(home, files_list)
 
     database_list = read_files(home, files_list)
@@ -14,7 +15,7 @@ def upload_files():
     return True
 
 
-def retrieve_files(home):
+def retrieve_files(home, banks):
     # Calls to downloads folder where csv file originally is
     path = Path(str(home)+'/Downloads/')
     # path = str(Path.home()) + '/Downloads'
@@ -30,7 +31,7 @@ def retrieve_files(home):
     }
 
     # Loops through all banks indicated
-    for bank in chosen_bank:
+    for bank in banks:
         # this loops through list values in dict
         for query in bank_matches[bank]:
             # this adds csv files to our list
@@ -59,22 +60,6 @@ def move_files(home, files_list):
         shutil.move(path_from + file, bank_folder)
 
 
-    # # Set directory to where this csv file will go
-    # path = home + '/.Green_Orchard_Banks/{}'
-    # try:
-    #     # note: 'bank' has to come from the file's properties,
-    #     # from the 'where from' data
-    #     x
-    #     bank_dir = bank.replace(' ', '_')
-    #     os.chdir(path.format(bank_dir))
-    # except NameError: # If there is no 'bank' variable
-    #     print("Name of bank isn't given. Try again")
-    # except FileNotFoundError:
-    #     # Adds underscore for banks with more than one word
-    #     new_dir = bank.replace(' ', '_')
-    #     os.mkdir('.Green_Orchard_Banks/' + new_dir)
-    #     os.chdir(path.format(new_dir))
-
 def read_files(files_list):
     file_path = str(home) + '/.Green_Orchard_Banks/{}/{}'
     database_list = []
@@ -90,58 +75,60 @@ def read_files(files_list):
             # for row in reader:
             #     print(row)
 
-        database_list.extend(check_for_duplicates(bank, current_file_contents))
+        database_list.extend(check_for_duplicates(bank, file_path.format(bank, ''), current_file_contents))
 
     return database_list
 
 
-def check_for_duplicates(bank, current_file_contents):
-    # will compare current file with last added file
-
+def check_for_duplicates(bank, bank_folder, current_file_contents):
     # return list if file is the first file in folder
-    # use something in python that tells length of folder contents
-    
-    # if both files have ~4 of the same expenses on the same days
-    # ignore everything until there are unique entries
-    pass
+    bank_files = [file.name for file in os.scandir(bank_folder) if os.path.isfile(file)]
+    if len(bank_files) < 2:
+        return current_file_contents
+
+    # will compare current file with last added file
+    with open(bank_folder+bank_files[-2]) as previous_csv:
+        reader = csv.reader(previous_csv, delimiter=',')
+        previous_file_contents = [row for row in reader]
+
+    # First line of current file
+    start_index = 0 if bank == 'Wells_Fargo' else 1
+
+    # Checking for where duplicates start in previous file
+    for prev_expense in previous_file_contents:
+        if prev_expense == current_file_contents[start_index]:
+            break
+
+    # Line of previous file where duplicates start
+    previous_file_index = previous_file_contents.index(prev_expense)
+
+    # Checking for where duplicates end in current file
+    for i in range(start_index, len(current_file_contents)):
+        if previous_file_contents[previous_file_index] != current_file_contents[i]:
+            break
+        current_file_contents[i].append(bank) # For bank id later
+        try:
+            previous_file_index += 1
+        except IndexError:
+            break # When lines for previous file run out
+
+    if i + 1 != len(current_file_contents):
+        # if there are unique values to be added to database
+        return current_file_contents[i:]
+    else:
+        # if all contents are duplicates
+        return []
+
 
 def add_to_database(database_list):
+    # Look into the bulk_create option in django, but have to do it right
+
     # will use ORM queries to add to postgresql
     for expense in database_list:
+        if expense[-1] == 'Discover': # definitely changing this
+            date = expense[0]
+            name = expense[2]
+            amount = float(expense[3])
+
         # will add each individual expense
-        pass
-
-
-def upload_file():
-    home = str(Path.home())
-
-    # Change this first os call after this file is moved to proper place
-    # os.chdir(home) #Obsolete if getting home directory
-
-    # For first time use of app:
-    if not os.path.isdir(home+'/.Green_Orchard_Banks/'):
-        os.mkdir(home+'/.Green_Orchard_Banks/')
-
-    # Set directory to where this csv file will go
-    path = home + '/.Green_Orchard_Banks/{}'
-    try:
-        # note: 'bank' has to come from the file's properties,
-        # from the 'where from' data
-        x
-        bank_dir = bank.replace(' ', '_')
-        os.chdir(path.format(bank_dir))
-    except NameError: # If there is no 'bank' variable
-        print("Name of bank isn't given. Try again")
-    except FileNotFoundError:
-        # Adds underscore for banks with more than one word
-        new_dir = bank.replace(' ', '_')
-        os.mkdir('.Green_Orchard_Banks/' + new_dir)
-        os.chdir(path.format(new_dir))
-
-    # Getting contents of csv file, line by line
-    with open(csv_file) as csvfile:
-        reader = csv.DictReader(csvfile)
-
-    # Adding content from each line into the database
-    for row in reader:
-        p = (~class)(~attributes on class)
+        User.expenses_set.create(name=name, amount=amount, date_posted=date)
