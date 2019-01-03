@@ -1,6 +1,7 @@
 import csv, os, shutil
 from pathlib import Path
-from expenses.models import (~class here)
+from expenses.models import Expenses
+from django.contrib.auth.models import User
 
 
 def upload_files(banks):
@@ -59,22 +60,6 @@ def move_files(home, files_list):
         shutil.move(path_from + file, bank_folder)
 
 
-    # # Set directory to where this csv file will go
-    # path = home + '/.Green_Orchard_Banks/{}'
-    # try:
-    #     # note: 'bank' has to come from the file's properties,
-    #     # from the 'where from' data
-    #     x
-    #     bank_dir = bank.replace(' ', '_')
-    #     os.chdir(path.format(bank_dir))
-    # except NameError: # If there is no 'bank' variable
-    #     print("Name of bank isn't given. Try again")
-    # except FileNotFoundError:
-    #     # Adds underscore for banks with more than one word
-    #     new_dir = bank.replace(' ', '_')
-    #     os.mkdir('.Green_Orchard_Banks/' + new_dir)
-    #     os.chdir(path.format(new_dir))
-
 def read_files(files_list):
     file_path = str(home) + '/.Green_Orchard_Banks/{}/{}'
     database_list = []
@@ -121,6 +106,7 @@ def check_for_duplicates(bank, bank_folder, current_file_contents):
     for i in range(start_index, len(current_file_contents)):
         if previous_file_contents[previous_file_index] != current_file_contents[i]:
             break
+        current_file_contents[i].append(bank) # For bank id later
         try:
             previous_file_index += 1
         except IndexError:
@@ -134,17 +120,15 @@ def check_for_duplicates(bank, bank_folder, current_file_contents):
         return []
 
 
-
-
-
-
-
-    # if both files have ~4 of the same expenses on the same days
-    # ignore everything until there are unique entries
-    pass
-
 def add_to_database(database_list):
+    # Look into the bulk_create option in django, but have to do it right
+
     # will use ORM queries to add to postgresql
     for expense in database_list:
+        if expense[-1] == 'Discover': # definitely changing this
+            date = expense[0]
+            name = expense[2]
+            amount = float(expense[3])
+
         # will add each individual expense
-        pass
+        User.expenses_set.create(name=name, amount=amount, date_posted=date)
