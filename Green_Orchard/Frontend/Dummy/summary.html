@@ -1,4 +1,60 @@
-This is the summary of expenses page for users to see overarching
+<!-- This is the summary of expenses page for users to see overarching
 views of their total expenses. Refer to the page with the text
 that says "Welcome Back, (user)", a div on top 5 expenses, a bar
-chart in the center, and the recent news div on the right side. 
+chart in the center, and the recent news div on the right side.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="/Green_Orchard/Green_Orchard/Frontend/Dummy/styles/general /summary.css">
+    <title>Categories</title>
+</head>
+
+<!-- {% extends "general/base.html" %} -->
+<!-- {% block content %} -->
+
+<body>
+
+
+    <div class="WelcomeBack">
+        <h2>Welcome Back {Name}</h2>
+    </div>
+
+    <h2>Take a Look at your Orchard</h2>
+
+    <div class="Categories">
+
+        <div class="all">
+            <h3>All Expenses</h3>
+            <ul>
+                <li>{Expense$}</li>
+                <li>{Expense$}</li>
+                <li>{Expense$}</li>
+                <li>{Expense$}</li>
+            </ul>
+        </div>
+
+        <div class="grouped">
+            <h3>Grouped Expenses</h3>
+            <h1>{Bar Chart}</h1>
+        </div>
+
+        <div class="News">
+            <h3>News</h3>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam quia sunt porro possimus repellat natus, architecto ducimus. Natus provident a similique ab neque </li>
+                <li>{Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam quia sunt porro possimus repellat natus, architecto ducimus. Natus provident a similique ab neque}</li>
+                <li>{Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam quia sunt porro possimus repellat natus, architecto ducimus. Natus provident a similique ab neque}</li>
+                <li>{Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam quia sunt porro possimus repellat natus, architecto ducimus. Natus provident a similique ab neque}</li>
+            </ul>
+        </div>
+
+    </div>
+
+<!-- {% endblock %} -->
+
+</body>
+</html>

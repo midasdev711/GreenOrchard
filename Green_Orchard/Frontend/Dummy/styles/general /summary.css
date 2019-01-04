@@ -1,0 +1,69 @@
+body {
+    font-family: 'Dosis', sans-serif;
+    /* display: flex; */
+    justify-content: space-around;
+}
+
+.Header {
+    border-bottom: 1px solid black;
+}
+
+.WelcomeBack {
+    border-bottom: 1px solid black;
+}
+
+.Categories {
+    display: flex;
+    justify-content: space-around;
+}
+
+.all {
+    /* justify-content: flex-start; */
+    text-align: center;
+    border: 1px solid black;
+    margin: 1em;
+    box-sizing: border-box;
+    display: block;
+    width: 15%;
+    height: 16em;
+    border-width: 0.1em;
+    border-style: solid;
+    outline: 0;
+}
+.all li {
+    margin-right: 1em;
+}
+
+.grouped {
+    /* justify-content: center; */
+    text-align: center;
+    border: 1px solid black;
+    margin: 1em;
+    width: 0em;
+    box-sizing: border-box;
+    display: block;
+    width: 26%;
+    border-width: 0.1em;
+    border-style: solid;
+    outline: 0;
+}
+.grouped h1 {
+    margin-top: 4em;
+}
+
+.News{
+    /* justify-content: flex-end; */
+    text-align: center;
+    border: 1px solid black;
+    margin: 1em;
+    width: 0em;
+    box-sizing: border-box;
+    display: block;
+    width: 20%;
+    border-width: 0.1em;
+    border-style: solid;
+    outline: 0;
+}
+.instructions  li{
+    margin: 1em;
+}
