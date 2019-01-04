@@ -1,0 +1,46 @@
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+.Container {
+    border: 2px inset black;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1%;
+}
+
+.Copyright {
+    margin-right: auto;
+    width: 20%;
+    font-weight: bold;
+}
+
+.OurInfo {
+    /* border: 1px solid red; */
+    width: 100%;
+    float: left;
+    align-content: center;
+}
+
+.OurInfo p {
+    margin-left: 22%;
+    display: inline-block;
+}
+
+i {
+    color: green;
+}
+
+/* .AlexInfo {
+    
+}
+
+.WillInfo {
+
+}
+
+.SamInfo {
+
+} */
