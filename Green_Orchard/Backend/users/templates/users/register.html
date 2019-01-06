@@ -1,7 +1,30 @@
+  <!-- <form action="">
+    <input type="text" name="firstname" placeholder="First Name">
+    <input type="text" name="lastname" placeholder="Last Name">
+    <input type="text" name="email" placeholder="Email Address">
+    <label>Banks Used</label>
+    <input type="checkbox" name="wellsFargo" value="Wells Fargo">
+    <input type="checkbox" name="bankOfAmerica" value="Bank of America">
+    <input type="checkbox" name="sunTrust" value="SunTrust">
+    <input type="text" name="password" placeholder="Password">
+    <input type="text" name="password2" placeholder="Confirm Password">
+    <input type="submit" value="Start Your Orchard">
+  </form> -->
 
+  <div class="actual-form">
+    <form action="POST">
+      {% csrf_token %}
+      <fieldset>
+        <legend>Start Your Orchard</legend>
+        {{ form.as_p }}
+      </fieldset>
+      <div>
+        <button type="submit">Start Your Orchard</button>
+      </div>
 
-<!DOCTYPE html>
-<html lang="en">
+    </form>
+  </div>
+
 
 <head>
     <meta charset="UTF-8">
