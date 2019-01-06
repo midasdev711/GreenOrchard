@@ -1,4 +1,4 @@
-This is the page where users actually can make edits to their
+<!-- This is the page where users actually can make edits to their
 profile information. We don't have a drawing for this yet, but
 essentially it's the following:
 
@@ -8,4 +8,84 @@ more like the regular profile page
 - Change username
 - Change password
 - Edit banks used
-- Delete profile (in red)
+- Delete profile (in red) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/edit_profile.css">
+    <title>Edit Profile - Green Orchard</title>
+</head>
+<body>
+    <div class="Edits">
+        <h1>Edit Profile - {{ name }}</h1>
+        <!-- --------------------------------------- -->
+        <button class="accordion">Edit Username</button>
+            <div class="panel">
+                <p>Enter a new username:</p>
+                <input type="text">
+                <p>Enter your password to confirm:</p>
+                <input type="password">
+                <input type="submit">
+            </div>
+        
+        <button class="accordion">Edit Password</button>
+            <div class="panel">
+                <p>Enter a new password:</p>
+                <input type="password">
+                <p>Enter your current password to confirm:</p>
+                <input type="password">
+                <input type="submit">
+            </div>
+        
+        <button class="accordion">Edit Profile Picture</button>
+        <div class="panel">
+            <p>Click on your picture to edit:</p>
+            <a href="#"><p>{{ current picture }}</p></a> 
+        </div>
+        
+        <button class="accordion">Edit Banks</button>
+            <div class="panel">
+                <p>Add a Bank:</p>
+                <input type="text">
+                <input type="submit" value="Add Bank">
+                <h3>Your Banks:</h3>
+                <!-- {% for bank in banks %} -->
+                <p>{{ bank }}</p> <input type="button" value="&times">
+                <p>{{ bank }}</p> <input type="button" value="&times">
+                <p>{{ bank }}</p> <input type="button" value="&times">
+
+            </div>
+        
+        <button class="accordion">Delete Profile (permanent)</button>
+            <div class="panel">
+                <p class="Warning">WARNING: This action cannot be undone.</p>
+                <p>Enter your password to confirm:</p>
+                <input type="text">
+                <input type="submit">
+            </div>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+h1 {
+    border-bottom: 3px solid black;
+}
+
+.Container {
+    /* border: 3px dotted red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.Container div {
+    border: 5px inset rgb(50, 225, 50);
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1%;
+    width: 40%;
+    max-width: 50%;
+    align-content: center;
+}
+
+table th {
+    font-weight: bolder;
+    /* display: inline; */
+}
+
+div h3 {
+    text-align: center;
+}
+
+.AllExpenses {
+    border: 5px inset rgb(50, 225, 50);
+    /* padding: 5%; */
+    /* margin-left: 0; */
+    max-height: 15rem;
+    overflow: scroll;
+    /* width: 30%; */
+}
+
+.AllExpenses table {
+    height: inherit;
+    align-content: center;
+}
+
+.GroupedExpenses {
+    display: inline;
+    /* width: 20%; */
+}
