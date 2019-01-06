@@ -1,5 +1,106 @@
-This is the page where users will edit their expenses' category
+<!-- This is the page where users will edit their expenses' category
 if they want. Refer to the drawing with three divs. The div on the
 left is all expenses with category, div in the middle is 'grouped'
 expenses with category, and the div on the right is a set of
-instructions for the user to edit them.
+instructions for the user to edit them. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/category.css">
+    <title>Expense Categories - Green Orchard</title>
+</head>
+<body>
+
+    <!-- {% extends "general/base.html" %} -->
+    <h1>Explore your Expenses</h1>
+    <!-- {% block content %} -->
+    <div class="Container">
+
+            <!-- <table class="AllExpenses">
+                <thead>
+                    <tr>
+                        <th>All Expenses</th> |
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>{{table data}}</tr>
+                </tbody>
+            </table> -->
+
+        <table class="AllExpenses">
+            <tr>
+                <th>All Expenses</th>
+                <th>Category</th> 
+            </tr>
+            <tr>
+                <td>Chick fil A</td>
+                <td>Fast Food</td>
+            </tr>
+            <tr>
+                <td>Chick fil A</td>
+                <td>Fast Food</td>
+            </tr>
+            <tr>
+                <td>Chick fil A</td>
+                <td>Fast Food</td>
+            </tr>
+            <tr>
+                <td>Chick fil A</td>
+                <td>Fast Food</td>
+            </tr>
+            <tr>
+                <td>Chick fil A</td>
+                <td>Fast Food</td>
+            </tr>
+            <tr>
+                <td>Chick fil A</td>
+                <td>Fast Food</td>
+            </tr>
+            <tr>
+                <td>Chick fil A</td>
+                <td>Fast Food</td>
+            </tr>
+            <tr>
+                <td>Chick fil A</td>
+                <td>Fast Food</td>
+            </tr>
+            <tr>
+                <td>Chick fil A</td>
+                <td>Fast Food</td>
+            </tr>
+            <tr>
+                <td>Chick fil A</td>
+                <td>Fast Food</td>
+            </tr>
+            <tr>
+                <td>Chick fil A</td>
+                <td>Fast Food</td>
+            </tr>
+            <tr>
+                <td>Chick fil A</td>
+                <td>Fast Food</td>
+            </tr>
+           
+        </table>
+
+        <!-- <hr> Remove when actual layout is added -->
+
+        <div class="GroupedExpenses">
+            <p>Expense</p> |
+            <p>Assigned Category</p>
+        </div>
+
+        <div class="Instructions">
+            <p>Edit individual or groupwise by replacing value in field</p>
+        </div>
+    </div>
+    <!-- {% endblock %} -->
+    
+</body>
+</html>
