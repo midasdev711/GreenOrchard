@@ -1,0 +1,11 @@
+body {
+    font-family: 'Dosis', sans-serif;
+    background-image: url("https://images.pexels.com/photos/997121/pexels-photo-997121.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+h1 {
+    border-bottom: 3px solid black;
+}
