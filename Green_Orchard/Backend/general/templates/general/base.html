@@ -37,6 +37,11 @@
       </li>
     </ul>
   </header>
+  {% if messages %}
+    {% for message in messages %}
+      <div>{{ message }}</div>
+    {% endfor %}
+  {% endif %}
   {% block content %}{% endblock %}
   <footer>
     &copy; 2019

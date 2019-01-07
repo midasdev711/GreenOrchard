@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from .forms import UserRegisterForm
 
 # Create your views here.
 def index(request):
@@ -17,13 +17,14 @@ def login(request):
 
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserRegisterForm(request.POST)
+        form.save() # Also hashes password for security
         if form.is_valid():
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Successfully registered!')
-            return redirect('profile')
+            messages.success(request, f'{username} has successfully registered!')
+            return redirect('users:main_profile')
     else:
-        form = UserCreationForm()
+        form = UserRegisterForm()
     context = {
         'title': 'Register',
         'form': form,
