@@ -1,25 +1,94 @@
 {% extends "general/base.html" %}
 
 {% block content %}
-  <!-- Playing with idea of doing this dynamically or just writing it in -->
-  <!-- Either way, formatting looks like this... -->
-  <nav>
-    <ul>
-      <li>General</li>
-      <li>Expenses</li>
-      <li>Budget</li>
-      <li>Loan Tracker</li>
-      <li>Profile</li>
-      <li>Banks</li>
-    </ul>
-  </nav>
-  <h3>Question</h3>
-  <p>Answer</p>
+<div class="Header">
+    <h1>Frequently Asked Questions</h1>
+</div>
 
-  <h3>Question</h3>
-  <p>Answer</p>
+<h2>Search questions by category:</h2>
 
-  <h3>Question</h3>
-  <p>Answer</p>
+<nav class="QuestionNav">
+  <ul>
+    <li><a href="#General">General</a></li> |
+    <li><a href="#Expenses">Expenses</a></li> |
+    <li><a href="#Budget">Budget</a></li> |
+    <li><a href="#LoanTracker">Loan Tracker</a></li> |
+    <li><a href="#Profile">Profile</a></li> |
+    <li><a href="#Banks">Banks</a></li>
+  </ul>
+</nav>
+
+<h3 class="QuestionCategory" id="General">General</h3>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h3 class="QuestionCategory" id="Expenses">Expenses</h3>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h3 class="QuestionCategory" id="Budget">Budget</h3>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h3 class="QuestionCategory" id="LoanTracker">Loan Tracker</h3>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h3 class="QuestionCategory" id="Profile">Profile</h3>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h3 class="QuestionCategory" id="Banks">Banks</h3>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<h4>Question</h4>
+<p>Answer</p>
+
+<!-- {% endblock %} -->
+
+<div class="EmailLink">
+    <h3>Still have questions?</h3>
+    <p>Email <a href="#">example@greenorchard.com</a> and we will respond within 2 business days.</p>
+</div>
 
 {% endblock %}
