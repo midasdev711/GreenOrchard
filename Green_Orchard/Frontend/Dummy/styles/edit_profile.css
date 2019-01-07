@@ -1,9 +1,18 @@
 body {
     font-family: 'Dosis', sans-serif;
+    background-image: url("https://images.pexels.com/photos/1146706/pexels-photo-1146706.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 h1 {
     border-bottom: 3px solid black;
+    text-align: right;
+}
+
+button {
+    font-weight: bolder;
 }
 
 .accordion {
@@ -13,11 +22,12 @@ h1 {
     cursor: pointer;
     padding: 2%;
     width: 100%;
-    border: 1px solid green;
+    border: 1px solid #16ca16;
     text-align: left;
     outline: none;
     font-size: 125%;
     transition: 0.4s;
+    opacity: 0.9;
 }
 
 .active, .accordion:hover {
@@ -30,6 +40,7 @@ h1 {
     background-color: white;
     overflow: hidden;
     border: 1px solid gray;
+    opacity: 0.95;
 }
 
 .Warning {
