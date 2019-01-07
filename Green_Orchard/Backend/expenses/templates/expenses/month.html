@@ -15,7 +15,14 @@
   <div class="month-right-align">
     <!-- have table-like section where titles are in bold and expenses are under -->
     <!-- also make a scrollbar for this div -->
-    <div class="expense-list"></div>
+    <div class="expense-list">
+      {% for expense in expenses %}
+        <h1>{{ expense.name }}</h1>
+        <p>ID: {{ expense.id }}</p>
+        <p>{{ expense.amount }}</p>
+        <p>{{ expense.date_posted }}</p>
+      {% endfor %}
+    </div>
     <p>Total Spent This Month: $<span>{{ total }}</span></p>
   </div>
 {% endblock %}

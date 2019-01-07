@@ -15,6 +15,7 @@ body {
     margin-right: auto;
     width: 20%;
     font-weight: bold;
+    border-right: 1px solid black;
 }
 
 .OurInfo {
@@ -22,6 +23,7 @@ body {
     width: 100%;
     float: left;
     align-content: center;
+    border-left: 1px solid black;
 }
 
 .OurInfo p {
