@@ -1,8 +1,48 @@
-This is the registration page where new users can sign up. Refer to
-the drawing where the quote on the left starts with "The best time
-to plant a tree was...", a form in the center, and a list of
-instructions on the right.
 
-NOTE: Make sure to include both the link to the login page (for if
-users need that instead), and the link to the FAQ's page under the
-list of instructions.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/Green_Orchard/Green_Orchard/Frontend/Dummy/styles/users/styleregister.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/space-app/front-end/css/register.css">
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <title>Sign Up </title>
+</head>
+    <div class="Wrapper">
+
+        <div class="Quote">
+            <h1>"The best time to plant a tree was 20 years ago. The second best time is now."</h1>
+            <h3><i>-Chinese proverb</i></h3>
+        </div>
+        <div class="SignUp">
+            
+            <h1 class="SignUp-header">Sign Up</h1>
+            
+            <form action ="" class="SignUp-container">
+              <p><input type="text" name="firstname" placeholder="First Name"></p>
+              <p><input type="text" name="lastname" placeholder="Last Name"></p>
+              <p><input type="text" name="email" placeholder="Email Address"></p>
+              <p><label>Banks Used</label></p>
+              <div class="checkBoxes">
+              <label><input type="checkbox" name="wellsFargo" value="Wells Fargo"> Wells Fargo</label>
+              <label><input type="checkbox" name="bankOfAmerica" value="Bank of America">Bank of America</label>
+              <label><input type="checkbox" name="sunTrust" value="SunTrust">Sun Trust</label>
+            </div>
+              <p><input type="text" name="password" placeholder="Password"></p>
+              <p><input type="text" name="password2" placeholder="Confirm Password"></p>
+              <p><input type="submit" value="Start Your Orchard"></p>
+            </form>
+            </div>
+            <div class="instructions">
+            <h3>How Green Orchard Works</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Still confused? See our <a href="{% url 'faq' %}">FAQs</a></p>
+</div>
+</div>
+
+        

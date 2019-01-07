@@ -9,21 +9,22 @@
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/space-app/front-end/css/stylelogin.css">
-    <title>Login </title>
+    <title>Upload </title>
 </head>
 
 <form>
-<div class="login">
+<div class="upload">
     
-    <h1 class="login-header">Log in</h1>
+    <h1 class="upload-header">Upload to Bank</h1>
     
     <form class="login-container">
-        <p><input type="text" placeholder="Username"></p>
-        <p><input type="password" placeholder="Password"></p>
-        <p>
-            <input type="submit" value="Sign In"> 
-        </p>
-        <!-- TODO send to signup page -->
-        <p class="text--center">Not a member? <a href="#">Sign up now</a> 
+        <p><label>Please choose which bank to upload:</label></p>
+        <div class="checkBoxes">
+        <div class="WellsFargo">
+        <label><input type="checkbox" name="wellsFargo" value="Wells Fargo"> Wells Fargo</label>
+    </div>
+        <label><input type="checkbox" name="bankOfAmerica" value="Capital One">Capital One</label>
+        <label><input type="checkbox" name="discover" value="Discover">Discover</label>
+    </div>
     </form>
 </div>

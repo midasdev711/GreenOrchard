@@ -42,15 +42,16 @@ div h3 {
     border: 2px outset black;
 }
 
-/* .AllExpenses {
+
+.AllExpenses {
     border: 5px inset #16ca16;
-    max-height: 40%;
-    height: 10%;
+    /* padding: 5%; */
+    /* margin-left: 0; */
+    max-height: 15rem;
     overflow: scroll;
     display: table;
     margin: 0 auto;
-} */
-
+} 
 
 .GroupedExpenses {
     display: inline;
