@@ -1,5 +1,8 @@
 body {
     font-family: 'Dosis', sans-serif;
+    background-image: url("https://images.pexels.com/photos/4587/forest-tree-tree-trunk-bark.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    color: white;
+    text-shadow: 2px 2px 2px black;
 }
 
 h1 {
@@ -13,13 +16,21 @@ h1 {
 }
 
 .Container div {
-    border: 5px inset rgb(50, 225, 50);
+    border: 5px inset #16ca16;
     margin-left: 5%;
     margin-right: 5%;
     padding: 1%;
     width: 40%;
     max-width: 50%;
+    max-height: 300px;
+    overflow: scroll;
+    height: 30%;
     align-items: center;
+}
+
+table {
+    height: inherit;
+    text-align: center;
 }
 
 table th {
@@ -31,18 +42,15 @@ div h3 {
     border: 2px outset black;
 }
 
-.AllExpenses {
-    border: 5px inset rgb(50, 225, 50);
+/* .AllExpenses {
+    border: 5px inset #16ca16;
     max-height: 40%;
+    height: 10%;
     overflow: scroll;
     display: table;
     margin: 0 auto;
-}
+} */
 
-.AllExpenses table {
-    height: inherit;
-    align-content: center;
-}
 
 .GroupedExpenses {
     display: inline;

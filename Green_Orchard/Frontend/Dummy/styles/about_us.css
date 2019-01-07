@@ -26,20 +26,20 @@ html {
 .AboutAlex {
     /* justify-content: flex-start; */
     text-align: center;
-    border: 1px solid #16ca16;
+    border: 2px inset #16ca16;
     margin: 1%;
 }
 
 .AboutWill {
     /* justify-content: center; */
     text-align: center;
-    border: 1px solid #16ca16;
+    border: 2px inset #16ca16;
     margin: 1%;
 }
 
 .AboutSam {
     /* justify-content: flex-end; */
     text-align: center;
-    border: 1px solid #16ca16;
+    border: 2px inset #16ca16;
     margin: 1%;
 }
