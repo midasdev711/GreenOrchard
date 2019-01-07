@@ -19,25 +19,24 @@ h1 {
     padding: 1%;
     width: 40%;
     max-width: 50%;
-    align-content: center;
+    align-items: center;
 }
 
 table th {
     font-weight: bolder;
-    /* display: inline; */
 }
 
 div h3 {
     text-align: center;
+    border: 2px outset black;
 }
 
 .AllExpenses {
     border: 5px inset rgb(50, 225, 50);
-    /* padding: 5%; */
-    /* margin-left: 0; */
-    max-height: 15rem;
+    max-height: 40%;
     overflow: scroll;
-    /* width: 30%; */
+    display: table;
+    margin: 0 auto;
 }
 
 .AllExpenses table {
@@ -47,5 +46,4 @@ div h3 {
 
 .GroupedExpenses {
     display: inline;
-    /* width: 20%; */
 }
