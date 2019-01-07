@@ -17,6 +17,7 @@ body {
     background-size: contain;
     background-color: black;
     overflow: hidden;
+    font-family: 'Dosis', sans-serif;
 }
 
 
@@ -76,14 +77,14 @@ body {
 }
 
 .login input[type="submit"] {
-    background: #47cf73;
+    background: #16ca16;
     border-color: transparent;
     color: #fff;
     cursor: pointer;
 }
 
 .login input[type="submit"]:hover {
-    background: rgb(52, 241, 5);
+    background: #16ca16;
 }
 
 /* Buttons' focus effect */
@@ -98,12 +99,12 @@ h1 {
     text-align: center;
     font-size: 40px;
     color: #ddd;
-    text-shadow: 3px 3px 10px #47cf73;
+    text-shadow: 3px 3px 10px #16ca16;
 }
 
 .text--center a {
     text-decoration: none;
-    color: #47cf73;
+    color: #16ca16;
 }
 
 .text--center {

@@ -13,7 +13,7 @@ h1 {
 }
 
 .Container div {
-    border: 5px inset rgb(50, 225, 50);
+    border: 5px inset #16ca16;
     margin-left: 5%;
     margin-right: 5%;
     padding: 1%;
@@ -32,7 +32,7 @@ div h3 {
 }
 
 .AllExpenses {
-    border: 5px inset rgb(50, 225, 50);
+    border: 5px inset #16ca16;
     /* padding: 5%; */
     /* margin-left: 0; */
     max-height: 15rem;
