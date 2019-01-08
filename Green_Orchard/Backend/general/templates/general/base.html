@@ -14,6 +14,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'general/Header.css' %}">
   {% endif %}
   <link rel="stylesheet" type="text/css" href="{% static 'general/footer.css' %}">
+  {% if css_file %}
+    <link rel="stylesheet" type="text/css" href="{% static css_file %}">
+  {% endif %}
   <title>{{ title }} - Green Orchard</title>
 </head>
 <body>
@@ -24,11 +27,11 @@
             <i class="fas fa-tree"></i>
             <nav role='navigation'>
                 <ul class="navLeft">
-                        <li><a href="#Register">{{ user.username }}</a></li>
+                        <li><a href="#">{{ user.username }}</a></li>
                         <li><a href="#Register">Logout</a></li>
                         </ul>
                 <ul class="navRight">
-                    <li><a href="#Summary">Summary</a></li>
+                    <li><a href="{% url 'expenses:expense-summary' %}">Summary</a></li>
                     <div class="Months">
                     <li><button href="Months-btn">Months</button></li>
                     <div class="dropDown-content">
@@ -48,15 +51,14 @@
                             <a href="#">December</a>
                         </div>
                     </div>
-                    <li><a href="Categories">Categories</a></li>
+                    <li><a href="#">Categories</a></li>
                     <div class="Other">
                     <li><button href="Other-btn">Other</button></li>
                     <div class="dropDown-content">
                             <a href="#">Personal Budget</a>
                             <a href="#">Loan Tracker</a>
-                            <a href="#">About Us</a>
-                            <a href="#">FAQ </a>
-                            <a href="#">The Team</a>
+                            <a href="{% url 'about-us' %}">The Team</a>
+                            <a href="{% url 'faq' %}">FAQ </a>
                         </div>
                     </div>
                 </ul>
@@ -70,13 +72,12 @@
             <i class="fas fa-tree"></i>
             <nav role='navigation'>
                 <ul class="navLeft">
-                        <li><a href="#Register">Login</a></li>
-                        <li><a href="#Profile">{Name}</a></li>
+                        <li><a href="{% url 'login' %}">Login</a></li>
                         </ul>
                 <ul class="navRight">
-                    <li><a href="#About">The Team</a></li>
-                    <li><a href="#FAQ">FAQ</a></li>
-                    <li><a href="#Register">Register</a></li>
+                    <li><a href="{% url 'about-us' %}">The Team</a></li>
+                    <li><a href="{% url 'faq' %}">FAQ</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
                 </ul>
             </nav>
         </div>

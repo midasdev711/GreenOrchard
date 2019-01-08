@@ -12,8 +12,10 @@ def index(request):
     # return render(request, 'users/dummy.html')
 
 def login(request):
-    return render(request, 'users/dummy.html')
-    # return render(request, 'users/login.html')
+    context = {
+        'css_file': 'users/stylelogin.css',
+    }
+    return render(request, 'users/login.html', context)
 
 def register(request):
     if request.method == 'POST':
@@ -26,6 +28,7 @@ def register(request):
     else:
         form = UserRegisterForm()
     context = {
+        'css_file': 'users/styleregister.css',
         'title': 'Register',
         'form': form,
     }
@@ -33,4 +36,8 @@ def register(request):
     return render(request, 'users/register.html', context)
 
 def edit_profile(request):
+    context = {
+        'css_file': 'users/edit_profile.css',
+    }
     return render(request, 'users/dummy.html')
+    # return render(request, 'users/edit_profile.html', context)
