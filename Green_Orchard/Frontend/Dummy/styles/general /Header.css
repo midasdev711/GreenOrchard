@@ -1,5 +1,5 @@
-/* Will Was here */
-/* header {
+header {
+    position: fixed;
     width: 100%;
     padding-top: 50px;
     background: rgb(18, 19, 18);
@@ -12,7 +12,7 @@
     background: #fff;
   }
   body.header-fixed header {
-
+    position: fixed;
     top: 0;
     right: 0;
     padding-top: 0;
@@ -89,4 +89,4 @@
       left: 27em;
       color: #16ca16;
       font-size: 2em;
-  } */
+  }

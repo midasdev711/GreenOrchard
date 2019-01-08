@@ -14,18 +14,13 @@ def index(request):
     return HttpResponse("This is the expenses index")
 
 def summary(request):
-    context = {
-        'css_file': 'expenses/summary.css',
-        'name': 'George',
-    }
-    return render(request, 'expenses/summary.html', context)
+    return render(request, 'expenses/summary.html', {'name': 'George'})
 
 def month(request):
     month_names = ['January', 'February', 'March', 'April',
                     'May', 'June', 'July', 'August',
                     'September', 'October', 'November', 'December']
     context = {
-        # 'css_file': 'expenses/month.css',
         'month': choice(month_names),
         # 'expenses': ['Stats Class', 'Rent', 'Clothing'],
         'expenses': Expenses.objects.all(),
@@ -34,8 +29,5 @@ def month(request):
     return render(request, 'expenses/month.html', context)
 
 def category(request):
-    context = {
-        'css_file': 'expenses/category.css',
-    }
     # return render(request, 'expenses/dummy.html')
-    return render(request, 'expenses/category.html', context)
+    return render(request, 'expenses/category.html')

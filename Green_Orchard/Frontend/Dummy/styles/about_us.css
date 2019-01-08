@@ -2,12 +2,6 @@ body {
     font-family: 'Dosis', sans-serif;
     /* display: flex; */
     justify-content: space-around;
-    color: white;
-    text-shadow: 2px 2px 2px black;
-}
-
-html {
-    background-image: url("https://images.pexels.com/photos/1250260/pexels-photo-1250260.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
 .Header {
@@ -26,20 +20,20 @@ html {
 .AboutAlex {
     /* justify-content: flex-start; */
     text-align: center;
-    border: 2px inset #16ca16;
+    border: 1px solid black;
     margin: 1%;
 }
 
 .AboutWill {
     /* justify-content: center; */
     text-align: center;
-    border: 2px inset #16ca16;
+    border: 1px solid black;
     margin: 1%;
 }
 
 .AboutSam {
     /* justify-content: flex-end; */
     text-align: center;
-    border: 2px inset #16ca16;
+    border: 1px solid black;
     margin: 1%;
 }

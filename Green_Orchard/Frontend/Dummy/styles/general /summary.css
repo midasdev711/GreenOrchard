@@ -1,9 +1,7 @@
 body {
+    font-family: 'Dosis', sans-serif;
     /* display: flex; */
     justify-content: space-around;
-    font-family: 'Dosis', sans-serif;
-    background: url(https://images.pexels.com/photos/1632790/pexels-photo-1632790.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
-
 }
 
 .Header {
@@ -31,9 +29,6 @@ body {
     border-width: 0.1em;
     border-style: solid;
     outline: 0;
-    border: 5px inset #16ca16;
-    text-decoration: none;
-    color: white;
 }
 .all li {
     margin-right: 1em;
@@ -52,8 +47,6 @@ body {
     border-style: solid;
     outline: 0;
     background-image: url("https://www.justinchanrepresents.com/img/photos/5784930a7dce2.gif");
-    border: 5px inset #16ca16;
-    color: white;
 }
 .grouped h1 {
     margin-top: 4em;
@@ -71,13 +64,6 @@ body {
     border-width: 0.1em;
     border-style: solid;
     outline: 0;
-    border: 5px inset #16ca16;
-    text-decoration: none;
-    color: white;
-}
-.News li {
-    margin: 1em;
-    text-decoration: none;
 }
 .instructions  li{
     margin: 1em;
