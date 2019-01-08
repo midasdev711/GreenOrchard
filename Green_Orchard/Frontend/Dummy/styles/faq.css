@@ -1,12 +1,9 @@
 body {
     font-family: 'Dosis', sans-serif;
-    background-image: url("https://images.pexels.com/photos/1353938/pexels-photo-1353938.jpeg?cs=srgb&dl=branch-bright-freshness-1353938.jpg&fm=jpg");
-    background-attachment: fixed;
 }
 
 .Header {
     border-bottom: 1px solid black;
-    text-shadow: 1px 1px 1px black;
 }
 
 ul {
@@ -22,10 +19,6 @@ h2 {
     text-align: center;
 }
 
-h4 {
-    font-weight: 800;
-}
-
 .QuestionNav {
     text-align: center;
 }
@@ -36,6 +29,6 @@ h4 {
 }
 
 .EmailLink {
-    border: 3px outset #16ca16;
+    border: 3px outset green;
     text-align: center;
 }
