@@ -1,7 +1,20 @@
-<!-- This is the standalone login page where users can go to login.
-Refer to the drawing with a form in the center and a link at the
-bottom that takes to the register link if they need that instead.
+{% extends "general/base.html" %}
 
-NOTE: We also have a login box on the index page, but this is the
-official way to login -->
+{% block content %}
 
+<div class="login">
+
+    <h1 class="login-header">Log in</h1>
+
+    <form class="login-container">
+        <p><input type="text" placeholder="Username"></p>
+        <p><input type="password" placeholder="Password"></p>
+        <p>
+            <input type="submit" value="Sign In">
+        </p>
+        <!-- TODO send to signup page -->
+        <p class="text--center">Not a member? <a href="{% url 'register' %}">Sign up now</a>
+    </form>
+</div>
+
+{% endblock %}

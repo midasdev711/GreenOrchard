@@ -1,18 +1,23 @@
-/* Will Was here */
-/* header {
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+
+header {
+    position: fixed;
     width: 100%;
     padding-top: 50px;
     background: rgb(18, 19, 18);
     transition: 0.7s all;
     background-size: contain;
-    overflow: hidden;
     z-index: 100;
   }
   header.alt-header {
     background: #fff;
   }
   body.header-fixed header {
-
+    position: fixed;
     top: 0;
     right: 0;
     padding-top: 0;
@@ -29,14 +34,20 @@
   }
   nav {
     overflow: hidden;
+    padding: 1em;
   }
   .navRight{
+    display: flex;
     float: right;
-    margin-right: 1em;
+    
+    margin-right: 3em;
+    position: relative;
+
     
   }
   .navRight li{
     float: left;
+    
   }
 
   .navLeft {
@@ -51,8 +62,18 @@
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    padding: 15px;
     transition: 0.3s all;
+    
+    
+  }
+
+  .navRight button {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s all;
+    
+    
   }
   
   nav a:hover {
@@ -65,7 +86,7 @@
     font-size: 50px;
     line-height: 50px;
     transition: 0.7s all;
-    margin-left: 0.2em;
+    margin-left: 0.2em
   }
   
   .alt-header .logo {
@@ -80,13 +101,40 @@
       
   }
   .inner{
-      position: relative;
+    position: relative;
   }
   .inner p{
       color: #fff;
       position: absolute;
-      bottom: 1em;
-      left: 27em;
+      bottom: 0.7em;
+      left: 20em;
       color: #16ca16;
       font-size: 2em;
-  } */
+  }
+
+  .dropDown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    overflow: scroll;
+    max-height: 40px;
+  }
+  .dropDown-content a {
+    color: black;
+    font-size: 10px;
+    padding: 1px 1px;
+    text-decoration: none;
+    display: block;
+    overflow: scroll;
+  }
+
+  .dropDown-content a:hover {background-color: #ddd;}
+  .Months:hover .dropDown-content {display: block;}
+  .Months:hover .Months-btn {background-color: #3e8e41;}
+
+  .dropDown-content a:hover {background-color: #ddd;}
+  .Other:hover .dropDown-content {display: block;}
+  .Other:hover .Other-btn {background-color: #3e8e41;}
