@@ -1,21 +1,14 @@
 header {
-    position: fixed;
     width: 100%;
-    padding-top: 50px;
     background: rgb(18, 19, 18);
     transition: 0.7s all;
     background-size: contain;
-    overflow: hidden;
     z-index: 100;
   }
   header.alt-header {
     background: #fff;
   }
   body.header-fixed header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding-top: 0;
     width: 100%;
     z-index: 2;
   }
@@ -24,7 +17,7 @@ header {
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    padding: 5px;
+    padding: 1px;
     transition: 0.3s all;
   }
   nav {
@@ -90,3 +83,8 @@ header {
       color: #16ca16;
       font-size: 2em;
   }
+  
+  @media screen and (max-width: 768px) {
+  
+
+}

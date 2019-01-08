@@ -118,9 +118,10 @@ h1{
     flex-direction: row;
 }
 .Wrapper{
+    height: 1em;
     display: flex;
     flex-direction: row;
-    margin: 5em;
+    margin: 1em;
 }
 .Quote{
     color: white;
