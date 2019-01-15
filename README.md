@@ -9,7 +9,7 @@ JavaScript, Django, Python, ReactJS, News API, D3.js, HTML5, CSS3
 
 ## Roles:
 - Alex Rogers: Backend Development and Database Architect
-- Will Harris: HTML and React Development, Integration of News API, CSS Styling
+- Will Harris: I helped on the front end of this project with HTML, CSS, Javascript, and React. I created the login, register, and summary page. For the summary page, I used a News API to bring in live news from the CNBC website. I also made media queries for individual pages.  
 - Sam Erickson: Along with Will, Sam helped initiate the HTML and React Development, along with handling the CSS styling of the website. Sam also developed media queries for pages across the site to allow for mobile responsiveness, and set up CSS transitions to improve the visual dynamics of Green Orchard. He set up the Monthly Summary page using React to render the pie chart, top 3 expenses for each month, and table of expenses.
 
 ## How to Use:
