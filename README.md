@@ -2,7 +2,7 @@
 
 ### Grow Your Orchard Today!
 
-Green Orchard is a financial management application designed to give users a detailed overview of their recent expenditures. Simply upload a CSV file from your bank(s), and Green Orchard will interpret that data and create dynamic charts and tables providing monthly and overall breakdowns of your finances. Users are able to create profiles that keep their data and summaries organized, engaging, and easy to interpret.
+Green Orchard is a financial management application designed to give users a detailed overview of their recent expenditures. Simply create a profile and upload a CSV file from your bank of choice, and Green Orchard will read that data and create dynamic charts and tables providing monthly and overall breakdowns of your finances. Users' profiles are customizable and help keep their data and summaries organized, engaging, and easy to interpret.
 
 ## Technologies Used:
 JavaScript, Django, Python, ReactJS, News API, D3.js, HTML5, CSS3
