@@ -8,7 +8,7 @@ Green Orchard is a financial management application designed to give users a det
 JavaScript, Django, Python, ReactJS, News API, D3.js, HTML5, CSS3
 
 ## Roles:
-- Alex Rogers: Backend Development and Database Architect
+- Alex Rogers: Backend Development and Database Architect - Alex designed the database and organized the Django backend framework. He also designed the MVC framework, and serialized the models in order to send a response to React requests.
 - Will Harris: Will helped on the front end of this project with HTML, CSS, Javascript, and React. Will created the login, register, and summary pages. For the summary page, he utilized News API to bring in live news from the CNBC website. Will also set up media queries for individual pages.  
 - Sam Erickson: Along with Will, Sam helped initiate the HTML and React Development, along with handling the CSS styling of the website. Sam also developed media queries for pages across the site to allow for mobile responsiveness, and set up CSS transitions to improve the visual dynamics of Green Orchard. He set up the Monthly Summary page using React to render the pie chart, top 3 expenses for each month, and table of expenses.
 
