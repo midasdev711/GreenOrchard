@@ -1,7 +1,7 @@
 # Green Orchard
 
 ### Grow Your Orchard Today!
-![alt text](greenorchard.co)
+[greenorchard.co](http://greenorchard.co)
 
 Green Orchard is a financial management application designed to give users a detailed overview of their recent expenditures. Simply create a profile and upload a CSV file from your bank of choice, and Green Orchard will read that data and create dynamic charts and tables providing monthly and overall breakdowns of your finances. Users' profiles are customizable and help keep their data and summaries organized, engaging, and easy to interpret.
 
